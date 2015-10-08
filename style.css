@@ -1,0 +1,262 @@
+@font-face {
+	font-family: bebasNeue;
+	src: url("BebasNeue.otf");
+	font-family: felt_tipregular;
+	src: url("feltTipRoman.ttf");
+}
+
+html {
+	padding: 0;
+	margin: 0;
+	font-family: bebasNeue;
+}
+
+body {
+	overflow: hidden;
+}
+
+#background img {
+	width: 1920px;
+	height: 1080px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+#pizza-pan {
+	width: 900px;
+	position: absolute;
+	left: -130px;
+	top: -130px;
+	z-index: 10;
+}
+
+#pizzas {
+	list-style: none;
+}
+
+@keyframes pizza-slide {
+	0% {
+		top: 100px;
+		left: -60px;
+	}
+	7% {
+		top: 100px;
+		left: -60px;
+		transform: rotate(0deg);	
+	}
+	/*Leaves screen*/
+	37% {
+		top: -600px;
+		left: -850px;
+		transform: rotate(-360deg);
+	}
+	60% {
+		top: -600px;
+		left: -850px;
+		transform: rotate(0deg);
+	}
+	90% {
+		top: -600px;
+		left: -850px;
+		transform: rotate(-360deg);
+	}
+	/*Enters screen*/
+	100% {
+		top: 100px;
+		left: -60px;
+	}
+}
+
+#pizzas img {
+	width: 750px;
+	height: auto;
+	z-index: 99;
+	position: absolute;
+	top: 100px;
+	left: -60px;
+	animation: pizza-slide 6s linear infinite;
+	-webkit-animation: pizza-slide 20s cubic-bezier(0.3, 0.9, 0.3, 0.9) infinite;
+	-moz-animation: pizza-slide 6s linear 0s infinite;
+	-o-animation: pizza-slide 6s linear 0s infinite;
+}
+
+#pizzas li #pepperoni {
+	animation-delay: 0s;
+	-webkit-animation-delay: -20s;
+	-moz-animation-delay: 0s;
+	-o-animation-delay: 0s;
+}
+
+#pizzas li #pepper {
+	animation-delay: 3s;
+	-webkit-animation-delay: -16s;
+	-moz-animation-delay: 3s;
+	-o-animation-delay: 3s;
+}
+
+#pizzas li #pineapple {
+	animation-delay: 6s;
+	-webkit-animation-delay: -12s;
+	-moz-animation-delay: 6s;
+	-o-animation-delay: 6s;
+}
+
+#pizzas li #mushroom {
+	animation-delay: 9s;
+	-webkit-animation-delay: -8s;
+	-moz-animation-delay: 9s;
+	-o-animation-delay: 9s;
+}
+
+#pizzas li #sausage {
+	animation-delay: 9s;
+	-webkit-animation-delay: -4s;
+	-moz-animation-delay: 9s;
+	-o-animation-delay: 9s;
+}
+
+
+h6 {
+	font-size: 3em;
+	margin-bottom: 0;
+	border-bottom: 5px solid #916A3F;
+}
+
+#sizes {
+	margin-top: 800px;
+	width: 650px;
+	position: relative;
+	text-align: center;
+	color: #916A3F;
+	margin-left: 50px;
+}
+
+#sizes li {
+	list-style-type: none;
+	font-size: 70pt;
+	float: left;
+	margin: 10px;
+	margin-top: 0px;
+	margin-bottom: 0;
+	border-right: 5px solid #916A3F;
+	max-height: 160px;
+}
+
+#sizes li div {
+	margin-top: -20px;
+	display: inline;
+}
+
+#sizes li h3 {
+	margin-top: 0;
+	margin-bottom: -10px;
+	margin-right: 5px;
+	font-size: 0.4em;
+}
+
+h5 {
+	font-size: 0.5em;
+	margin: 0;
+	margin-top: -20px;
+	display: inline;
+	vertical-align: top;
+}
+
+#sizes li:nth-child(1) {
+	border-left: 5px solid #916A3F;
+}
+
+#logo {
+	margin-left: 50px;
+}
+
+#sizes-bottom-border {
+	width: 650px;
+	border-bottom: 5px solid #916A3F;
+	position: absolute;
+	bottom: 30px;
+	left: 55px;
+}
+
+
+
+/*Menu Title*/
+.menu-header {
+  font-size: 48px !important;
+  text-transform: capitalize;
+  font-family: "felt_tipregular";
+  text-align: center;
+}
+
+.menu-title {
+	position: absolute;
+	top: 0;
+	left: 100px;
+  font-size: 120px;
+  text-transform: capitalize;
+  font-family: felt_tipregular;
+  text-align: center;
+  color: #916A3F;
+  margin: -5px;
+  margin-left: 500px;
+}
+/*End of Menu Title*/
+
+/*Column Style*/
+.flex-container {
+  padding: 0;
+  margin: 0px;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: 20px;
+  color: #916A3F;
+  border-right: 5px solid #916A3F;
+}
+
+.no-border {
+  border-right: none;
+}
+
+.flex-item {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: bebasNeue;
+  margin: -1;
+  padding: -1;
+  text-align: left;
+}
+
+.menu-wrap {
+	position: absolute;
+	top: 10%;
+	left: 0;
+	margin-right: 0;
+	margin-left: 44%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+/*Section Title*/
+.section-title {
+  font-size: 48px !important;
+  text-transform: capitalize;
+  font-family: "felt_tipregular";
+  text-align: center;
+  margin: 10px; 
+  padding: 10px;
+  border-bottom: 5px solid #916A3F;
+  border-top: 5px solid #916A3F;
+}
+/*End of Section Title*/
+/*End of Column Style*/
